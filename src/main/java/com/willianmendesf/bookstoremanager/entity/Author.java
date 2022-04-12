@@ -7,6 +7,10 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Entity
+//@Data
+//@Builder
+//@NoArgsConstructor
+//@AllArgsConstructor
 public class Author {
 	
 	@Id

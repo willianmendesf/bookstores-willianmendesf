@@ -21,18 +21,21 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 public class Book {
-	
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private long id;
-	
+
+	@Column(name = "image_url", nullable = true, unique = true)
+	private String imageUrl;
+
 	@Column(nullable = false, unique = true)
 	private String name;
 	
 	@Column(nullable = false)
 	private Integer pages;
 	
-	@Column(nullable = false)
+	@Column(nullable = true)
 	private Integer chapters;
 	
 	@Column(nullable = false)

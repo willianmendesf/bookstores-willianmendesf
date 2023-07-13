@@ -14,12 +14,16 @@ public class BookService {
 	@Autowired
 	private BookRepository bookRepository;
 
+	public Object List() {
+		return bookRepository.findAll();
+	}
+
 	public MessageResponseDTO create(Book book) {
 		Book savedBook = bookRepository.save(book);
-		
+
 		return MessageResponseDTO
 				.builder()
-				.message("book created with ID " + savedBook.getId())
-				.build();
+					.message("book created with ID " + savedBook.getId())
+						.build();
 	}
 }

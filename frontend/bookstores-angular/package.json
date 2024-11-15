@@ -3,7 +3,11 @@
   "version": "0.0.1",
   "scripts": {
     "ng": "ng",
-    "start": "npm run compodoc && ng serve",
+    "config":"npm install",
+    "start": "npm run doc:generate && ng serve -o",
+    "doc":"npm run doc:generate && npm run doc:server",
+    "doc:generate":"compodoc -p ./tsconfig.doc.json",
+    "doc:server":"compodoc -s -o ./tsconfig.doc.json -o",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",

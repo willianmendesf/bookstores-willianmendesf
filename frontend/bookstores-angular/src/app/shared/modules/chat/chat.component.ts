@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { OllamaService } from '../../service/ollamaservice.service';
+import { FormControl, FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'chat',
@@ -12,6 +13,9 @@ export class ChatComponent {
     private ia : OllamaService
   ) { }
 
+  chatForm = new FormGroup({
+    mensagem: new FormControl('')  
+  });
 
   public chat(request : string) {
     this.ia.generateText(request).subscribe({
@@ -21,6 +25,10 @@ export class ChatComponent {
 
       complete: () => console.log('Mensagem recebida com sucesso!')
     })
+  }
+
+  onSubmit() {
+    console.log(this.chatForm.value);
   }
 
 }

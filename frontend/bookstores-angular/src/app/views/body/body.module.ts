@@ -15,8 +15,8 @@ import { FooterModule } from '../footer/footer.module';
     HeaderModule,
     MainModule,
     FooterModule,
-    // CommonModule,
-    // RouterModule,
+    CommonModule,
+    RouterModule,
   ],
   exports: [
     BodyComponent

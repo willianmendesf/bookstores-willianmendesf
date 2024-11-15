@@ -1,0 +1,12 @@
+.navbar {
+  &__list {
+    display: flex;
+
+    &__item {
+      padding: 0.6vw;
+      text-decoration: none;
+      color: #fff;
+      font-size: 1vw;
+    }
+  }
+}

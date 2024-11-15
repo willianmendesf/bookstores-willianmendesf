@@ -9,7 +9,6 @@ import { BodyComponent } from './views/body/body.component';
 @NgModule({
   declarations: [
     AppComponent,
-    // BodyComponent
   ],
   imports: [
     CommonModule,

@@ -1,13 +1,18 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { RouterModule } from '@angular/router';
+import { provideHttpClient, HttpClientModule } from '@angular/common/http';
+import { ApiService } from './service/apiservice.service';
 
 
 @NgModule({
-  declarations: [ ],
+  declarations: [
+
+  ],
   imports: [
-    CommonModule,
-],
+    CommonModule
+  ],
+  providers: [
+  ],
   exports: [ ]
 })
 export class SharedModule { }

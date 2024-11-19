@@ -13,11 +13,11 @@ export class OllamaService {
     private http: HttpClient
   ) {}
 
-  generateText(prompt: string): Observable<OllamaResponse> {
+  public generateText(prompt: string): Observable<OllamaResponse> {
     const body = {
-      prompt,
-      model: 'llama3.2:1b',
-      temperature: 0.7
+      "prompt": prompt,
+      "model": 'llama3.2:1b',
+      "temperature": 0.7
     };
 
     return this.http.post<OllamaResponse>(this.baseUrl, body);

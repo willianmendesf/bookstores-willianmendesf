@@ -17,8 +17,9 @@ export class ChatComponent {
     mensagem: new FormControl('')  
   });
 
-  public chat(request : string) {
-    this.ia.generateText(request).subscribe({
+  public chat(prompt : string) {
+    console.log(prompt)
+    this.ia.generateText(prompt).subscribe({
       next: response => console.log(response),
 
       error: error => console.error(error),
@@ -27,7 +28,7 @@ export class ChatComponent {
     })
   }
 
-  onSubmit() {
+  public onSubmit() {
     console.log(this.chatForm.value);
   }
 

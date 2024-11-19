@@ -3,7 +3,8 @@ import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { AppComponent } from './app.component';
 import { PageTitleModule } from './shared/modules/pagetitle/pagetitle.module';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, provideHttpClient } from '@angular/common/http';
+import { ApiService } from './shared/service/apiservice.service';
 
 
 @NgModule({
@@ -12,6 +13,8 @@ import { HttpClientModule } from '@angular/common/http';
     CommonModule,
     RouterModule,
     PageTitleModule,
+],
+  providers: [
 ],
   exports: [ ]
 })

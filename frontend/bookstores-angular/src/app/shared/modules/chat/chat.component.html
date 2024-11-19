@@ -1,13 +1,14 @@
 <div class="chat">
   <form [formGroup]="chatForm" (ngSubmit)="onSubmit()">
-    <div>
-      <h4>Olá, sou sua IA assistente da Books Store!</h4>
-      <p>Como posso te ajudar?</p>
+    <div class="chat__title">
+      <h4 class="chat__title__htitle">Olá, sou sua IA assistente da Books Store!</h4>
+      <p class="chat__title__subtitle">Como posso te ajudar?</p>
     </div>
-
-    <label for="mensagem">Mensagem:</label>
-    <textarea id="mensagem" formControlName="mensagem"></textarea>
-
-    <button type="submit">Enviar</button>
+    <div class="chat__message">
+      <textarea class="chat__message__content" id="mensagem" formControlName="mensagem"></textarea>
+    </div>
+    <div class="chat__submit">
+      <button class="chat__submit__btn" type="submit">Enviar Mensagem</button>
+    </div>
   </form>
 </div>
